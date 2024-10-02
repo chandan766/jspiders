@@ -35,7 +35,10 @@ public class EmirpNum {
     public static void main(String[] args) {
         System.out.print("Enter a num: ");
         int n = new Scanner(System.in).nextInt();
-        if(isPrime(reverse(n)) && reverse(n)!=n){
+        if(!(isPrime(n))){
+            System.out.println("Error! Please Enter a prime number");
+        }
+        else if(isPrime(reverse(n)) && reverse(n)!=n){
             System.out.println(n+" is a Emrip Number");
         }
         else{
