@@ -1,5 +1,4 @@
 
-```
 # Oracle SQL Plus Built-in Commands
 
 This document lists useful Oracle SQL Plus commands and their purposes. You can copy the commands from the code blocks below and run them in your SQL Plus environment.
@@ -227,4 +226,4 @@ SPOOL output_file_name.txt;
 ---
 
 
-```
+
