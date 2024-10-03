@@ -33,6 +33,17 @@ Oracle SQL plays a crucial role in:
 
 ---
 
+## Available Tables
+
+| TNAME   | TABTYPE |
+|---------|---------|
+| EMP     | TABLE   |
+| DEPT    | TABLE   |
+| BONUS   | TABLE   |
+| SALGRADE| TABLE   |
+
+----
+
 ## EMP Table
 
 | EMPNO | ENAME  | JOB      | MGR  | HIREDATE   | SAL  | COMM | DEPTNO |
