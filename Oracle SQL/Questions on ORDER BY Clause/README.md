@@ -1,7 +1,7 @@
 
 # Questions on ORDER BY Clause
 
-> **Note:** Candidates should be aware of subqueries.
+**Note:** Candidates should be aware of subqueries.
 
 ### 1. WAQTD details of the product if the price of the product is more than 25000, arrange the records according to quantity in ascending.
 ```sql
