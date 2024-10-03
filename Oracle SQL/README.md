@@ -7,6 +7,7 @@
 4. [Importance of Oracle SQL](#importance-of-oracle-sql)
 5. [EMP Table](#emp-table)
 6. [DEPT Table](#dept-table)
+7. [SALGRADE Table](#salgrade-table)
 
 ---
 
