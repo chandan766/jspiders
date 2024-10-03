@@ -85,3 +85,97 @@ WHERE WARRANTY > (SELECT WARRANTY FROM PRODUCT WHERE PNAME = 'INFINIX-NOTE12PRO'
       QUANTITY > (SELECT QUANTITY FROM PRODUCT WHERE PID = 2)
 ORDER BY PRICE ASC, PID DESC;
 ```
+
+### 11. What are the details of teachers who are earning a salary? Arrange the salary in descending order.
+```sql
+SELECT *
+FROM TEACHER
+WHERE SALARY IS NOT NULL 
+ORDER BY SALARY DESC;
+```
+
+### 12. What are the names and branches of students who are from Bangalore? Arrange the records according to student ID in descending order.
+```sql
+SELECT SNAME, BRANCH
+FROM STUDENT
+WHERE LOCATION = 'BANGLORE'
+ORDER BY SID DESC;
+```
+
+### 13. What are the name, hire date, and experience of teachers who were hired after Harish? Arrange the records according to experience in ascending order.
+```sql
+SELECT TNAME, HIREDATE, EXPERIENCE
+FROM TEACHER
+WHERE HIREDATE > (SELECT HIREDATE
+                  FROM TEACHER
+                  WHERE TNAME = 'HARISH')
+ORDER BY EXPERIENCE ASC;
+```
+
+### 14. What are the name, date of birth, and phone number of students who have the character 'A' in their location? Arrange records according to date of birth in ascending order.
+```sql
+SELECT SNAME, DOB, PH_NO
+FROM STUDENT
+WHERE LOCATION LIKE '%A%'
+ORDER BY DOB ASC;
+```
+
+### 15. What are the details of teachers who are earning more than 29,000 but less than 50,000 and have more than 3 years of experience? Arrange the records according to their teacher ID in descending order.
+```sql
+SELECT *
+FROM TEACHER
+WHERE SALARY BETWEEN 29001 AND 49999 
+  AND EXPERIENCE > 3 
+ORDER BY TID DESC;
+```
+
+### 16. What are the name, salary, and experience of teachers who are earning less than Kumar? Arrange the records according to their experience in ascending order.
+```sql
+SELECT TNAME, SALARY, EXPERIENCE
+FROM TEACHER
+WHERE SALARY < (SELECT SALARY
+                FROM TEACHER
+                WHERE TNAME = 'KUMAR')
+ORDER BY EXPERIENCE ASC;
+```
+
+### 17. What are the name, branch, phone number, and gender of students whose teacher has more than 2 years of experience? Arrange the records according to phone number.
+```sql
+SELECT SNAME, BRANCH, PH_NO, GENDER
+FROM STUDENT
+WHERE TID IN (SELECT TID
+               FROM TEACHER
+               WHERE EXPERIENCE > 2)
+ORDER BY PH_NO ASC;
+```
+
+### 18. What are the details of the students who are studying in the branch 'ME-CS' and are from Delhi or Chennai? Arrange the records according to the age of students in ascending order.
+```sql
+SELECT *
+FROM STUDENT
+WHERE BRANCH = 'ME-CS' 
+  AND LOCATION IN ('DELHI', 'CHENNAI')
+ORDER BY AGE ASC;
+```
+
+### 19. What are the details of the students who are from locations except Bangalore and have the character 'E' in their branch? Arrange the records according to student ID in ascending and age in descending order.
+```sql
+SELECT *
+FROM STUDENT
+WHERE LOCATION NOT IN ('BANGLORE') 
+  AND BRANCH LIKE '%E%' 
+ORDER BY SID ASC, AGE DESC;
+```
+
+### 20. What are the name and salary of teachers who are earning more than Harish but were hired before Ram? Arrange the records according to their salary in descending and age in ascending order.
+```sql
+SELECT TNAME, SALARY
+FROM TEACHER
+WHERE SALARY > (SELECT SALARY
+                FROM TEACHER
+                WHERE TNAME = 'HARISH') 
+  AND HIREDATE < (SELECT HIREDATE
+                  FROM TEACHER
+                  WHERE TNAME = 'RAM')
+ORDER BY SALARY DESC, AGE ASC;
+```
