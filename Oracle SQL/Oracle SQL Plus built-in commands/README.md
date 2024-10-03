@@ -26,6 +26,16 @@ This document lists useful Oracle SQL Plus commands and their purposes. You can 
 18. [Show Owned Tables](#18-select-tablename-from-user_tables)
 19. [Format Column Display](#19-column-column_name-format-format_specification)
 20. [Write Output to File](#20-spool-filename)
+21. [Set Timing](#21-set-timing-onoff)
+22. [Change Date Format](#22-alter-session-set-nls_date_format)
+23. [Autotrace](#23-set-autotrace-onoff)
+24. [Allow Blank Lines in Script](#24-set-sqlblanklines-onoff)
+25. [Control Output Display](#25-set-termout-onoff)
+26. [Prompt User](#26-prompt)
+27. [Stop Spool](#27-spool-off)
+28. [Exit SQL*Plus](#28-exit)
+29. [Commit Changes](#29-commit)
+30. [Rollback Changes](#30-rollback)
 
 ---
 
@@ -224,6 +234,113 @@ SPOOL output_file_name.txt;
 ```
 
 ---
+
+### 21. `SET TIMING ON/OFF`
+This turns the timing of SQL command execution on or off, useful for performance analysis.
+
+```sql
+SET TIMING ON;
+```
+or
+```sql
+SET TIMING OFF;
+```
+
+---
+
+### 22. `ALTER SESSION SET NLS_DATE_FORMAT`
+This changes the default date format for the current session.
+
+```sql
+ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH24:MI:SS';
+```
+
+---
+
+### 23. `SET AUTOTRACE ON/OFF`
+This provides query execution statistics. When `ON`, it shows execution plans and statistics.
+
+```sql
+SET AUTOTRACE ON;
+```
+or
+```sql
+SET AUTOTRACE OFF;
+```
+
+---
+
+### 24. `SET SQLBLANKLINES ON/OFF`
+This allows or disallows blank lines in a script.
+
+```sql
+SET SQLBLANKLINES ON;
+```
+or
+```sql
+SET SQLBLANKLINES OFF;
+```
+
+---
+
+### 25. `SET TERMOUT ON/OFF`
+This controls whether SQL*Plus displays the output of commands from a script.
+
+```sql
+SET TERMOUT ON;
+```
+or
+```sql
+SET TERMOUT OFF;
+```
+
+---
+
+### 26. `PROMPT`
+This command displays a message to the user.
+
+```sql
+PROMPT Enter a valid ID:
+```
+
+---
+
+### 27. `SPOOL OFF`
+Stops writing to a file initiated with the `SPOOL` command.
+
+```sql
+SPOOL OFF;
+```
+
+---
+
+### 28. `EXIT`
+This command exits SQL*Plus.
+
+```sql
+EXIT;
+```
+
+---
+
+### 29. `COMMIT`
+This commits the current transaction, making all changes permanent.
+
+```sql
+COMMIT;
+```
+
+---
+
+### 30. `ROLLBACK`
+This rolls back the current transaction, undoing all changes made since the last `COMMIT`.
+
+```sql
+ROLLBACK;
+```
+
+---
+
 
 
 
