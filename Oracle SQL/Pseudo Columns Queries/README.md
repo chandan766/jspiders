@@ -20,6 +20,7 @@
 | 7902  | FORD   | ANALYST  | 7566 | 03-DEC-81 | 3000 |      | 20     |
 | 7934  | MILLER | CLERK    | 7782 | 23-JAN-82 | 1300 |      | 10     |
 
+----
 
 # DEPT Table
 
@@ -30,6 +31,7 @@
 | 30     | SALES        | CHICAGO  |
 | 40     | OPERATIONS   | BOSTON   |
 
+----
 
 1. **Get 1st Half of the Records from Employee Table:**
    ```sql
