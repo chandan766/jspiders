@@ -35,11 +35,11 @@ public class Pattern17 {
             System.out.println();
             if(i<=n/2){
                 stars--;
-                if(i>1) spaces +=1;
+                if(i>1) spaces++;
             }
             else{
                 stars++;
-                spaces -=1;
+                spaces--;
             }
         }
     }
