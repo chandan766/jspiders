@@ -5,7 +5,7 @@
  */
 import java.util.Scanner;
 public class Palindrome {
-    public static boolean palindrome(String s){
+    public static boolean isPalindrome(String s){
         s = s.toLowerCase();
         char[] arr = s.toCharArray();
         int i=0,j=arr.length-1;
@@ -16,7 +16,7 @@ public class Palindrome {
     }
     public static void main(String[] args) {
         String s = new Scanner(System.in).next();
-        System.out.println(palindrome((s)));
+        System.out.println(isPalindrome((s)));
     }
     
 }
