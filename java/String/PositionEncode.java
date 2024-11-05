@@ -7,25 +7,21 @@
 import java.util.Scanner;
 
 public class PositionEncode {
-	
 	public static String position_encode(String s) {
-		char[] arr = s.toCharArray();
-		for(int i=0;i<s.length();i++) {
-			int count = 0;
-			for(char c:s.toCharArray()) {
-				if((s.charAt(i)==c) && !(c>='0' && c<='9')) count++;
-			}
-			if(count>1) {
-				char k='1';
-				for(int j = 0;j<arr.length;j++) {
-					if(s.charAt(i)==arr[j]) {
-						arr[j]=k++;
+		char[] c = s.toCharArray();
+        for(int i=0;i<c.length;i++){
+			int count=0;
+            for(int j=0;j<c.length;j++){
+				if(s.charAt(i)==s.charAt(j)){
+					count++;
+					if(count>1){
+						c[i] = '1';
+						c[j]=(char)(count+'0');
 					}
 				}
-				s = new String(arr);
-			}
-		}
-		return new String(arr);
+            }
+        }
+        return new String(c);
 	}
 
 	public static void main(String[] args) {
