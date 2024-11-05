@@ -9,33 +9,17 @@ import java.util.Scanner;
 public class MissingVowels {
 	
 	public static void missingVowels(String s) {
-		char[] l = new char[s.length()];
-		char[] u = new char[s.length()];
 		String v = "aeiouAEIOU";
-		int j=0,k=0;
-		for(int i=0;i<s.length();i++) {
-			char ch = s.charAt(i);
-			if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u') {
-				l[j++] = ch;
-			}else if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U') {
-				u[k++] = ch;
-			}
-		}
-		char[] arr = l;
-		for(int i=0;i<10;i++) {
+		for(int i=0;i<v.length();i++) {
+			char c1 = v.charAt(i);
 			boolean flag = true;
-			if(arr[0]==0) return;
-			for(char c: arr) {
-				if(v.charAt(i)==c) {
+			for(char c2: s.toCharArray()){
+				if(c1==c2){
 					flag=false;
 					break;
-				}
+				} 
 			}
-			if(flag) System.out.print(v.charAt(i)+" ");
-			if(i==4) {
-				arr = u;
-			}
-					
+			if(flag) System.out.print(c1+" ");
 		}
 			
 	}
