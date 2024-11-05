@@ -12,19 +12,18 @@ public class SecondMaxChar {
 		int max = 0;
 		int second_max = 0;
 		char ch = s.charAt(0);
-		for(int i=0;i<s.length();i++) {
+		while(s.length()!=0) {
 			String s1 = "";
 			for(int j=0;j<s.length();j++) {
-				if(s.charAt(i)==s.charAt(j)) freq++;
+				if(s.charAt(0)==s.charAt(j)) freq++;
 				else s1+=s.charAt(j);
 			}
 			if(freq>max) max = freq;
 			else if(freq>second_max){
 				second_max = freq;
-				ch = s.charAt(i);
+				ch = s.charAt(0);
 			}
 			s=s1;
-			i=0;
 			freq = 0;
 		}
 		System.out.println(ch+": "+second_max);
