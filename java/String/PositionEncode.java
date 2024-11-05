@@ -12,13 +12,13 @@ public class PositionEncode {
         for(int i=0;i<c.length;i++){
 			int count=0;
             for(int j=0;j<c.length;j++){
-				if(s.charAt(i)==s.charAt(j)){
-					count++;
-					if(count>1){
-						c[i] = '1';
-						c[j]=(char)(count+'0');
-					}
-				}
+		if(s.charAt(i)==s.charAt(j)){
+			count++;
+			if(count>1){
+				c[i] = '1';
+				c[j]=(char)(count+'0');
+			}
+		}
             }
         }
         return new String(c);
