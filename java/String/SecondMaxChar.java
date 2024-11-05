@@ -22,12 +22,12 @@ public class SecondMaxChar {
 			else if(freq>second_max){
 				second_max = freq;
 				ch = s.charAt(i);
-				System.out.println(ch+": "+second_max);
 			}
 			s=s1;
 			i=0;
 			freq = 0;
 		}
+		System.out.println(ch+": "+second_max);
 	}
 
 	public static void main(String[] args) {
