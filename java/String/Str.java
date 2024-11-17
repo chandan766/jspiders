@@ -6,6 +6,8 @@
  * is a palindrome. These methods are commonly used in text processing and encoding/decoding tasks.
  */
 
+import java.lang.reflect.Method;
+
 public class Str {
     /**
      * Compresses a string by converting consecutive duplicate characters into their count.
@@ -180,4 +182,5 @@ public class Str {
         }
         return true;
     }
+
 }
